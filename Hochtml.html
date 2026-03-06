@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Du Lịch Cà Mau</title>
+    <style>
+        /* --- PHẦN BANNER CHÍNH --- */
+        .frame {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            border: 5px solid black;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            overflow: hidden; /* Đưa overflow lên đây để cắt góc bo tròn */
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .info {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+        .info p, .info h3 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+            color: whitesmoke;
+            margin: 0;
+            text-align: center;
+        }
+        button {
+            background-color: gray;
+            color: white;
+            border: 1px solid rgba(0,0,0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* --- PHẦN DANH SÁCH ĐỊA ĐIỂM (DÙNG CHUNG 1 CLASS) --- */
+        
+        /* 1. Khung chứa (thay cho Muc1, Muc2, Muc3) */
+        .muc-dia-diem {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            height: 250px;
+        }
+        
+        /* 2. Hình ảnh (thay cho image1, image2, image3) */
+        .anh-dia-diem {
+            width: 40%;
+            height: 100%;
+            object-fit: cover; /* Chống méo ảnh */
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            box-shadow: 0px 4px 8px #0056b3;
+            border-radius: 10px;
+        }
+        
+        /* 3. Khối chữ (thay cho Noi1, Noi2, Noi3) */
+        .thong-tin-dia-diem {
+            flex: 1;
+            background-color: lightblue;
+            border-radius: 10px;
+            padding: 20px;
+            overflow-y: auto;
+            /* Đã dọn dẹp sạch sẽ mớ left, right, top thừa thãi */
+        }
+        .thong-tin-dia-diem p {
+            margin: 0;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5; /* Cho chữ dễ đọc hơn */
+        }
+    </style>
+</head>
+<body>
+    <section class="frame">
+        <img src="https://cdn-media.sforum.vn/storage/app/media/ctvseo_MH/%E1%BA%A3nh%20%C4%91%E1%BA%B9p%20c%C3%A0%20mau/anh-dep-ca-mau-2.jpg" class="image">
+        <div class="info">
+            <h3> Tour du lịch <br> 2 ngày 1 đêm tại <br> Cà Mau</h3>
+            <p> Giá tiền: 1.300.000</p>
+            <button> Xem chi tiết</button>
+        </div>
+    </section>
+
+    <section class="muc-dia-diem">
+        <img src="https://diemdenantoan.sgtiepthi.vn/wp-content/uploads/2023/08/muicamau-9.jpg" class="anh-dia-diem">
+        <div class="thong-tin-dia-diem">
+            <p> <strong> Mũi Cà Mau </strong>là điểm cực Nam thiêng liêng trên đất liền của Việt Nam...</p>
+            <p> <br> <strong> Vị trí: </strong> Nằm cách thành phố Cà Mau khoảng 120km...</p>
+        </div>
+    </section>
+
+    <section class="muc-dia-diem">
+        <img src="https://file.hstatic.net/1000217270/article/vuon_quoc_gia_u_minh_ha_1_5ef9d0a96e724e1f9be29f4cb7b2aea5.jpg" class="anh-dia-diem"> 
+        <div class="thong-tin-dia-diem">
+            <p> <strong> Rừng U Minh Hạ </strong> là khu rừng tràm nguyên sinh quý hiếm...</p>
+            <p> <br> <strong> Vị trí: </strong> Nằm trên địa bàn hai huyện U Minh và Trần Văn Thời...</p>
+        </div>
+    </section>
+
+    <section class="muc-dia-diem">
+        <img src="https://booking.muongthanh.com/upload_images/images/H%60/dam-thi-tuong-1.jpg" class="anh-dia-diem"> 
+        <div class="thong-tin-dia-diem">
+            <p> <strong> Đầm Thị Tường </strong> là đầm nước tự nhiên lớn nhất vùng Đồng bằng sông Cửu Long...</p>
+            <p> <br> <strong> Vị trí: </strong> Đầm nằm cách trung tâm thành phố Cà Mau khoảng 40 km...</p>
+        </div>
+    </section>
+</body>
+</html>
